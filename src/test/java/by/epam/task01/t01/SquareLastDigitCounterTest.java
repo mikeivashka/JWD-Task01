@@ -23,10 +23,10 @@ public class SquareLastDigitCounterTest extends Assert {
     @Parameterized.Parameters
     public static Collection<Object[][]> testCases() {
         return Arrays.asList(new Integer[][][]{
-                {{0, 1, 9}, {0, 1, 1}},
-                {{10, 123, 9}, {0, 9, 1}},
-                {{10, 123, 9}, {0, 9, 1}},
-                {{Integer.MAX_VALUE, Integer.MIN_VALUE}, {9, 4}}
+                {{0, 1, 9}, {0, 1, 1}}, // Digits
+                {{10, 123, 9}, {0, 9, 1}}, // Default
+                {{-10, -123, -9}, {0, 9, 1}}, // Negative
+                {{Integer.MAX_VALUE, Integer.MIN_VALUE}, {9, 4}} // Min & Max
         });
     }
 

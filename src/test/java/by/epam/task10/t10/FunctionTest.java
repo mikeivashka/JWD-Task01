@@ -7,6 +7,6 @@ public class FunctionTest extends Assert {
 
     @Test
     public void testValues() {
-        Function.values(0, 3, 0.1, true);
+        Function.values(0, 3, 0.1, false);
     }
 }

@@ -2,7 +2,6 @@ package by.epam.task02.t02;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.time.DateTimeException;
 
 
@@ -18,6 +17,7 @@ public class DaysMonthCounterTest extends Assert {
         try {
             DaysMonthCounter.countByYearAndMonth(-100, -200);
             fail();
+        } catch (DateTimeException e) {
         }
-        catch (DateTimeException e){}
-    }}
+    }
+}
