@@ -9,7 +9,8 @@ public class Function {
     }
 
     public static List<Double> values(double a, double b, double h) {
-        if (h <= 0 || a > b) throw new IllegalArgumentException();
+        if (h <= 0 || a > b) throw new IllegalArgumentException("h must be >0 and a must be less or equal to b");
+        if((b-a)/h > 10e5)throw new IllegalArgumentException("Can't create table for values, ((b-a)/h) must be less or equal to 10e5 to avoid OutOfMemoryError");
         ArrayList<Double> values = new ArrayList<>((int) ((b - a) / h + 1));
         List<Double> points = splitSegment(a, b, h);
         points.forEach(p -> values.add(getValue(p)));

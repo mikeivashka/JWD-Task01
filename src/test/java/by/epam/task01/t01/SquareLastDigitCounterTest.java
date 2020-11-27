@@ -35,8 +35,7 @@ public class SquareLastDigitCounterTest extends Assert {
         try {
             SquareLastDigitCounter.count(null);
             fail();
-        } catch (NullPointerException e) {
-        }
+        } catch (NullPointerException e) {}
 
     }
 
